@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Demo Dashboard
+
+A basic dashboard built with **Next.js** showcasing some clean and modern UI visuals, inspired by a YouTube tutorial. This project focuses on layout and presentation, using charts, fonts, and a command menu to give it a sleek dashboard feel.
+
+ Just visuals, no routing or backend logic.
+
+---
+
+## Tech Stack
+
+- **Next.js** – React framework for building the UI  
+- **Recharts** – For rendering simple, interactive graphs  
+- **React Font-Icons** – For custom Icons 
+- **cmdk** – Command menu interface (like a Search bar)
+
+---
+
+## Preview
+
+![Dashboard Screenshot](public/demo-pic.png)
+
+---
+
+## Notes
+This is a demo project, mainly focused on learning and experimenting with UI tools.
+
+Based on a tutorial from YouTube.
+
+No multiple pages, backend, or advanced state management, just a solid frontend layout.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Clone the repo and run it locally:
 
 ```bash
+git clone https://github.com/yourusername/demo-dashboard.git
+cd demo-dashboard
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Happy Coding
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
