@@ -35,7 +35,7 @@ No multiple pages, backend, or advanced state management, just a solid frontend 
 Clone the repo and run it locally:
 
 ```bash
-git clone https://github.com/yourusername/demo-dashboard.git
+git clone https://github.com/Uche-arch/demo-dashboard.git
 cd demo-dashboard
 npm install
 npm run dev
