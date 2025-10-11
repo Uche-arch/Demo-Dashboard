@@ -28,6 +28,8 @@ Based on a tutorial from YouTube.
 
 No multiple pages, backend, or advanced state management, just a solid frontend layout.
 
+The current layout is designed for desktop use only and does not adapt well to smaller screens.
+
 ---
 
 ## Getting Started
