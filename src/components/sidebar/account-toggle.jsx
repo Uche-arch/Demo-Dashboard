@@ -2,14 +2,14 @@ import Image from "next/image";
 export default function Account() {
   return (
     <>
-      <div className="border-b mb-4 mt-2 pb-4 border-stone-300">
+      <div className="border-b mb-4 pb-3 pt-0.5 border-stone-300">
         <button className="flex p-0.5 hover:bg-stone-200 rounded transition-colors relative gap-2 w-full items-center">
           <Image
             src="/profile.png"
             alt="avatar"
             className="size-8 rounded shrink-0 shadow"
-            width={500} // Set the width
-            height={500} // Set the height
+            width={500}
+            height={500}
           />
           <div className="text-start">
             <span className="text-sm font-bold block">Uche Godswill</span>

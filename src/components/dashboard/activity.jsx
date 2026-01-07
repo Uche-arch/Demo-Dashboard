@@ -11,13 +11,7 @@ import {
   YAxis,
 } from "recharts";
 
-import {
-  FiUser,
-  FiEye,
-  FiFileText,
-  FiLayers,
-  FiDollarSign,
-} from "react-icons/fi";
+import { FiUser } from "react-icons/fi";
 
 const data = [
   {
@@ -63,46 +57,57 @@ const data = [
     amt: 2100,
   },
 ];
+
 export default function Activity() {
   return (
     <>
       <div className="col-span-2 overflow-hidden rounded border border-stone-300">
-        <div className="p-4">
-          <h3 className="flex items-center gap-1.5 font-medium"><FiUser></FiUser> Activity</h3>
+        {/* Header */}
+        <div className="p-3 sm:p-4">
+          <h3 className="flex items-center gap-1.5 font-medium text-sm sm:text-base">
+            <FiUser className="text-base sm:text-lg" />
+            Activity
+          </h3>
         </div>
-        <div className="h-64 px-4">
+
+        {/* Chart */}
+        <div className="h-56 sm:h-64 px-2 sm:px-4">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
-              width={500}
-              height={400}
               data={data}
               margin={{ top: 0, right: 0, left: -4, bottom: 0 }}
             >
               <CartesianGrid stroke="#e4e4e7" />
+
               <XAxis
                 dataKey="name"
                 padding={{ right: 4 }}
                 axisLine={false}
                 tickLine={false}
-                className="text-xs font-bold"
+                className="text-[10px] sm:text-xs font-medium"
               />
+
               <YAxis
-                className="text-sm font-bold"
                 axisLine={false}
                 tickLine={false}
+                className="text-[10px] sm:text-xs font-medium"
               />
+
               <Tooltip
-                wrapperClassName="text-sm rounded"
-                labelClassName="text-sm text-stone-500"
+                wrapperClassName="rounded text-xs sm:text-sm"
+                labelClassName="text-[10px] sm:text-xs text-stone-500"
               />
-              <Legend />
+
+              <Legend wrapperStyle={{ fontSize: "12px" }} />
+
               <Line
                 type="monotone"
                 dataKey="RV"
                 stroke="#18181b"
                 fill="#18181b"
-                activeDot={{ r: 8 }}
+                activeDot={{ r: 6 }}
               />
+
               <Line
                 type="monotone"
                 dataKey="AV"
@@ -113,8 +118,6 @@ export default function Activity() {
           </ResponsiveContainer>
         </div>
       </div>
-
-      {/* TODO our graph */}
     </>
   );
 }

@@ -28,23 +28,35 @@ export default function Stats() {
 
 const Card = ({ title, value, pillText, trend, period }) => {
   return (
-    <div className="p-4 rounded border border-stone-300">
-      <div className="flex mb-8 items-start justify-between ">
-        <div>
-          <h3 className="text-stone-500 mb-2 text-sm">{title}</h3>
-          <p className="text-3xl font-semibold">{value}</p>
+    <div className="p-3 sm:p-4 rounded border border-stone-300">
+      <div>
+        {/* Top row */}
+        <div className="flex justify-between mb-3 sm:mb-4">
+          {/* Title */}
+          <h3 className="text-xs sm:text-sm font-medium text-stone-500">
+            {title}
+          </h3>
+
+          {/* Trend pill */}
+          <span
+            className={`text-[10px] sm:text-xs flex items-center gap-1 font-medium px-1.5 sm:px-2 py-0.5 sm:py-1 rounded ${
+              trend === "up"
+                ? "bg-green-100 text-green-700"
+                : "bg-red-100 text-red-700"
+            }`}
+          >
+            {trend === "down" ? "-" : "+"} {pillText}
+          </span>
         </div>
-        <span
-          className={`text-xs flex items-center gap-1 font-medium px-2 py-1 rounded ${
-            trend === "up"
-              ? "bg-green-100 text-green-700"
-              : "bg-red-100 text-red-700"
-          }`}
-        >
-          {trend === "down" ? "-" : "+"} {pillText}
-        </span>
+
+        {/* Main value */}
+        <p className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-3">
+          {value}
+        </p>
       </div>
-      <p className="text-xs text-stone-500">{period}</p>
+
+      {/* Period */}
+      <p className="text-[10px] sm:text-xs text-stone-500">{period}</p>
     </div>
   );
 };
